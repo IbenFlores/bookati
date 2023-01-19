@@ -1,0 +1,18 @@
+.user-form {
+  margin: 10px auto;
+  padding: 25px 35px;
+  width: 50%;
+  border: 1px solid #39393a;
+  border-radius: 10px;
+}
+
+.user-form form {
+  width: 400px;
+  margin: auto;
+}
+
+.user-form .field {
+  margin: 5px;
+}
+
+
