@@ -17,6 +17,8 @@ gem "font-awesome-sass", "~> 6.1"
 
 gem "devise"
 
+gem "pundit"
+
 gem "geocoder"
 
 gem "faker"
@@ -56,7 +58,6 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "rspec-rails"
   gem "factory_bot_rails"
-  gem "faker"
   gem "dotenv-rails"
 end
 
