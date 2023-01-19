@@ -17,6 +17,8 @@ gem "font-awesome-sass", "~> 6.1"
 
 gem "devise"
 
+gem "geocoder"
+
 gem "faker"
 
 gem "pg", "~> 1.1"
@@ -55,6 +57,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem "faker"
+  gem "dotenv-rails"
 end
 
 group :development do
