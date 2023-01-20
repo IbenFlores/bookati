@@ -1,0 +1,51 @@
+<h1><%= current_user.name %></h1>
+<h2><%= current_user.email %></h2>
+<h2><%= current_user.address %></h2>
+<h3>current balance: $<%= current_user.wallet.balance %></h3>
+
+<% if @new_seller %>
+  <%= simple_form_for [current_user, @new_seller] do |f| %>
+    <%= f.input :phone_number %>
+    <%= f.submit "become a seller" %>
+  <% end %>
+<% else %>
+  <h3>Earnings since you became a seller: <%= current_user.seller.earnings %></h3>
+  <h3>Books you're selling:</h3>
+  <div class="book-cards">
+    <% @books.each do |book| %>
+      <div class="card-book" data-controller="profile-books">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-book-infos" data-profile-books-target="book">
+          <div>
+            <h2><%= link_to book.title, book_path(book), style: "text-decoration: none; color: black;" %></h2>
+            <p><%= book.description %></p>
+            <p>by <%= book.author %></p>
+          </div>
+          <button class="edit-book-btn" data-action="click->profile-books#editFormToggle">
+            <i class="fa-regular fa-pen-to-square "></i>
+          </button>
+          <button class="delete-book-btn">
+            <%= link_to book_path(book), data: {turbo_method: :delete, turbo_confirm: "Delete book?"} do %>
+              <i class="fa-solid fa-trash"></i>
+            <% end %>
+          </button>
+          <h2 class="card-profile-book-pricing">£<%= book.price %></h2>
+        </div>
+        <div class="card-book-infos d-none" id="edit-book" data-profile-books-target="bookForm" >
+          <%= simple_form_for book, html: { class: "edit-book-form" } do |f| %>
+            <%= f.input :title, label: false, input_html: {class: "fs-4"} %>
+            <%= f.input :description, as: :text, label: false %>
+            <%= f.input :author, label: false %>
+            <%= f.input :price, input_html: {class: "card-edit-book-pricing"}, label: false %>
+            <button class="edit-book-btn" data-action="click->profile-books#editFormToggle">
+              <i class="fa-regular fa-pen-to-square "></i>
+            </button>
+            <%= f.submit "edit", class: "btn form-btn", id: "book-submit" %>
+          <% end %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+<% end %>
+

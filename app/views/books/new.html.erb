@@ -1,0 +1,10 @@
+<div class="bookati-form">
+  <%= simple_form_for @book do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :author %>
+    <%= f.input :price %>
+    <%= f.submit "Add a book", class: "btn form-btn" %>
+  <% end %>
+</div>
+

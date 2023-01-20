@@ -1,0 +1,47 @@
+.bookati-form {
+  margin: 10px auto;
+  padding: 25px 35px;
+  width: 50%;
+  border: 1px solid #39393a;
+  border-radius: 10px;
+}
+
+.bookati-form form {
+  width: 400px;
+  margin: auto;
+}
+
+.bookati-form .field {
+  margin: 5px;
+}
+
+.edit-book-form input {
+  font-size: 12px;
+  margin: 5px;
+  padding: 0 !important;
+  border: none;
+  background-image: none !important;
+}
+
+.edit-book-form textarea {
+  font-size: 12px;
+  margin: 5px;
+  padding: 0 !important;
+  border: none;
+  background-image: none !important;
+}
+
+.edit-book-form .card-edit-book-pricing {
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+  width: 75px;
+  top: 15px;
+  right: -75px;
+}
+
+.card-edit-book-pricing::-webkit-outer-spin-button,
+.card-edit-book-pricing::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
