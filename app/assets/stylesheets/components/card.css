@@ -1,0 +1,82 @@
+.card-book {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.card-book>img {
+  height: 175px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-book h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-book p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-book .card-book-infos {
+  width: 75%;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-book-pricing {
+  position: absolute;
+  top: -160px;
+  right: -60px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #E63462;
+}
+
+.card-profile-book-pricing {
+  position: absolute;
+  top: 20px;
+  right: -60px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.edit-book-btn {
+  position: absolute;
+  top: 60px;
+  right: -55px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.delete-book-btn {
+  position: absolute;
+  top: 90px;
+  right: -55px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.delete-book-btn i {
+  color: black;
+}
+
+.book-seller-info {
+  position: absolute;
+  right: -60px;
+  top: -20px;
+  width: 40px;
+}

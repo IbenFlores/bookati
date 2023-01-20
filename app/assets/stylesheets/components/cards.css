@@ -1,0 +1,6 @@
+.book-cards {
+  margin-left: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 16px;
+}

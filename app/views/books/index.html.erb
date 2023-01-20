@@ -1,0 +1,21 @@
+<h1>Books for sale:</h1>
+
+<div class="book-cards">
+  <% @books.each do |book| %>
+    <div class="card-book">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-book-infos">
+        <div>
+          <h2><%= link_to book.title, book_path(book) %></h2>
+          <p><%= book.description %></p>
+          <p>by <%= book.author %></p>
+        </div>
+        <h2 class="card-book-pricing">£<%= book.price %></h2>
+        <div class="book-seller-info">
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-book-user avatar-bordered" />
+          <p><%= book.seller.user.name %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
